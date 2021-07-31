@@ -2,7 +2,7 @@
 
 int main()
 {
-	for(int i=0;i<100;i++){
+	while(1){
 		for (int ix=0;ix<1000;ix++) printf("%d,",ix);
 		printf("\n");
 	}

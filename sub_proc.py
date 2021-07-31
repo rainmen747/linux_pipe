@@ -8,4 +8,4 @@ while True:
    #the real code does filtering here
        data=line.rstrip()
     count=count+1
-    print(count,data[300])
+    print(count,data)
