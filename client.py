@@ -11,7 +11,7 @@ print("mkfifo_",fifo)
 i=0
 with open(fifo,"w") as w:
     print("Writing\n")
-    while i<21:
+    while i<1001:
         mystr="Welcome Im rainmen {0}\n".format(i)
         os.write(pipe,mystr.encode())
         i+=1

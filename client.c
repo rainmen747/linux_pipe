@@ -22,6 +22,8 @@ int main()
         exit(1);
 
     }
+  
+  
 
   for(cnt=0; cnt<1000; cnt++){
 
@@ -36,8 +38,9 @@ int main()
 
 
 	}
-
+  
 /*
+
     for(cnt=0; cnt<3; cnt++){
 
         printf("input a message : ");

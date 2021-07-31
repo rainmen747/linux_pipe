@@ -55,7 +55,7 @@ int main()
 
         }
 
-        printf("recv: %s\n", msg);
+        printf("%s", msg);
 
     }
 
