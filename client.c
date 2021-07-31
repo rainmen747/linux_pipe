@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MSG_SIZE 100
+#define MSG_SIZE 1000
 
 int main()
 {
@@ -25,10 +25,11 @@ int main()
   
   
 
-  for(cnt=0; cnt<1000; cnt++){
+  for(cnt=0; cnt<10; cnt++){
 
-        sprintf(msg,"%s %d\n","good test",cnt);
-        if(write(filedes, msg, strlen(msg))==-1){
+       // sprintf(msg,"%s %d\n","good test",cnt);
+        for (int ix=0;ix<1000;ix++) msg[ix]=cnt % 255;
+        if(write(filedes, msg, 1023)==-1){
 
             printf("fail to call write()\n");
 

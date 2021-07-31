@@ -12,12 +12,16 @@ if os.path.exists(fifo)==False:
 
 print("mkfifo_",fifo)
 
+#data=bytes(range(256))
+data=bytearray(2000)
+count=0
+
 with open(fifo,"r") as r:
 	print("Reading\n")
 	while True:
-		time.sleep(0.1)
+		#time.sleep(0.1)
 		data=r.read()
-		if (data!=""):
-			print(data)
+		count=count+1
+		print(count)
 	r.close()
     
