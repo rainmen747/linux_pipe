@@ -4,7 +4,7 @@ import subprocess
 
 
 
-proc = subprocess.Popen(['./test_stdout'],stdout=subprocess.PIPE)
+proc = subprocess.Popen(['./rain_fx3'],stdout=subprocess.PIPE)
 
 window=tkinter.Tk()
 
