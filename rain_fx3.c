@@ -116,7 +116,7 @@ int main( int argc, char **argv )
     while(1)    {
         ret=read_from_fx3(device_handle,buffer,TRANSFER_SIZE,200);
         //printf("%d  %d------------------------------------\n",ix,ret);
-        for (i=0;i<300;i++) printf("%3d ",buffer[i+100]);
+        for (i=0;i<1010;i++) printf("%d ",buffer[i]);
         printf("\n");
     }
     printf("Ok closing....\n");
