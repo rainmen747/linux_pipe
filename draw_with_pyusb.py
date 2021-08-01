@@ -30,11 +30,11 @@ scrollbar.pack(side="bottom", fill="x")
 scrollbar.config(command=myCanvas.xview)
 myCanvas.pack() 
 
-x=0
  
+ret=dev.ctrl_transfer(0x81,usb.util.CTRL_OUT, 0x21, 0x20, 2);
 while True:
     data= dev.read(0x81,1024*16,10)
-    
+    dev.control
     line_array = [(n, 20+data[n+1000]) for n in range(1,1000)]
     myCanvas.create_line(line_array,fill="Blue")
 
