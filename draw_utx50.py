@@ -1,4 +1,4 @@
-import  tkinter 
+import tkinter 
 import time
 import subprocess
 
