@@ -22,14 +22,24 @@ window.title("Rainmen")
 window.geometry("1000x480+100+100")
 window.resizable(True,True)
 myCanvas = tkinter.Canvas(window, bg="white", height=400, width=1020)
+
+scrollbar=tkinter.Scrollbar(window)
+scrollbar=tkinter.Scrollbar(orient=tkinter.HORIZONTAL)
+
+scrollbar.pack(side="bottom", fill="x")
+scrollbar.config(command=myCanvas.xview)
 myCanvas.pack() 
 
 x=0
  
 while True:
     data= dev.read(0x81,1024*16,10)
-    for ix in range(1,500,1):
-        myCanvas.create_line(ix*2,20+(data[ix+2000]),ix*2+2,20+(data[ix+1+2000]),fill="Blue")
+    
+    line_array = [(n, 20+data[n+1000]) for n in range(1,1000)]
+    myCanvas.create_line(line_array,fill="Blue")
+
+    #for ix in range(1,500,1):
+    #    myCanvas.create_line(ix*2,20+(data[ix+200]),ix*2+2,20+(data[ix+1+200]),fill="Blue")
     myCanvas.update()
     time.sleep(0.001)
     myCanvas.delete("all")
